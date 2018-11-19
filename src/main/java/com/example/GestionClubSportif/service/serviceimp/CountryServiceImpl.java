@@ -5,6 +5,8 @@ import com.example.GestionClubSportif.model.Country;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CountryServiceImpl implements ICountryService {
 
@@ -17,14 +19,13 @@ public class CountryServiceImpl implements ICountryService {
         return repository.findCountryByCode(code);
     }
 
-
     @Override
-    public Iterable<Country> recupererToutPays() {
-        return repository.findAll();
+    public Country findCountryById(Long id) {
+        return repository.findCountryById(id);
     }
 
     @Override
-    public void supprimerPays(Country pays) {
-       repository.delete(pays);
+    public List<Country> recuprerToutPays() {
+        return repository.recuprerTtPays();
     }
 }

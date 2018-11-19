@@ -23,11 +23,19 @@ public class GestionClubSportifApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+     for (Country pays:service.recuprerToutPays()){
+         System.out.println(pays);
+     }
 
-        System.out.println("La liste des pays");
+
+
+/*
+ System.out.println("La liste des pays");
         for(Country country:service.recupererToutPays()){
             System.out.println(country);
         }
-        System.out.println(service.findCountryByCode("MA"));
+ */
+
+       //
     }
 }

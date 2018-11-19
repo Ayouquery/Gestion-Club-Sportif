@@ -2,8 +2,10 @@ package com.example.GestionClubSportif.service.serviceimp;
 
 import com.example.GestionClubSportif.model.Country;
 
+import java.util.List;
+
 public interface ICountryService {
     Country findCountryByCode(String code);
-    Iterable<Country> recupererToutPays();
-    void supprimerPays(Country pays);
+    Country findCountryById(Long id);
+    List<Country> recuprerToutPays();
 }

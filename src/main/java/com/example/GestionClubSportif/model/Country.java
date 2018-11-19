@@ -1,8 +1,9 @@
 package com.example.GestionClubSportif.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 
-@Entity()
+@Entity
 @Table(name = "countries")
 public class Country {
     @Id
@@ -12,6 +13,7 @@ public class Country {
     @Column(name = "name")
     private String name;
     @Column(name = "code")
+    @Size(min = 1, max = 2)
     private String code;
 
 
